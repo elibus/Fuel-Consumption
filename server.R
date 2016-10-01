@@ -15,6 +15,7 @@ shinyServer(function(input, output) {
     
     # Plot the prediction with 95% confidence internval
     ggplot(pred, aes(x = hp)) +
+      labs(x="Horse Power", y="Mileage per gallon") +
       geom_ribbon(aes(ymin = lwr, ymax = upr),
                   fill = "blue",
                   alpha = 0.2) +

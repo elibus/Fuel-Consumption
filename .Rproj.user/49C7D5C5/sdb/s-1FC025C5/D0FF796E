@@ -1,0 +1,20 @@
+{
+    "collab_server" : "",
+    "contents" : "library(shiny)\nlibrary(ggplot2)\n\ndata(mtcars)\nmtcars$am <- as.factor(mtcars$am)\nlevels(mtcars$am) <- c(\"Auto\", \"Manual\")\nfit <- lm(mpg ~ am + wt + hp, data = mtcars)\n\n# Define UI for application that draws a histogram\nshinyUI(fluidPage(\n  # Application title\n  titlePanel(\"Fuel consumption estimation\"),\n  \n  # Sidebar with a slider input for number of bins\n  sidebarLayout(\n    sidebarPanel(\n      sliderInput(\n        \"hp\",\n        \"HP:\",\n        min = 1,\n        max = 500,\n        value = mean(mtcars$hp)\n      ),\n      sliderInput(\n        \"wt\",\n        \"Weight (tons):\",\n        min = 0.5,\n        max = 6,\n        value = mean(mtcars$wt),\n        step = 0.10\n      ),\n      radioButtons(\n        \"am\",\n        \"Transmission type:\",\n        choices = c(\"Auto\" = 0 , \"Manual\" = 1)\n      )\n    ),\n    \n    mainPanel(plotOutput(\"plot\"))\n  )\n))\n",
+    "created" : 1475330761644.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "715463271",
+    "id" : "D0FF796E",
+    "lastKnownWriteTime" : 1475336843,
+    "last_content_update" : 1475336843653,
+    "path" : "~/dev/FuelConsumption/ui.R",
+    "project_path" : "ui.R",
+    "properties" : {
+    },
+    "relative_order" : 1,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_source"
+}

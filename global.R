@@ -1,0 +1,1 @@
+fit <- lm(mpg ~ am + wt + hp, data = mtcars)

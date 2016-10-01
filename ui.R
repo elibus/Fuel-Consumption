@@ -4,7 +4,6 @@ library(ggplot2)
 data(mtcars)
 mtcars$am <- as.factor(mtcars$am)
 levels(mtcars$am) <- c("Auto", "Manual")
-fit <- lm(mpg ~ am + wt + hp, data = mtcars)
 
 # Define UI for application that draws a histogram
 shinyUI(fluidPage(

@@ -6,9 +6,8 @@ framework   : io2012        # {io2012, html5slides, shower, dzslides, ...}
 highlighter : highlight.js  # {highlight.js, prettify, highlight}
 hitheme     : tomorrow      # 
 widgets     : []            # {mathjax, quiz, bootstrap}
-mode        : selfcontained # {standalone, draft}
-knit        : slidify::knit2slides
-
+mode        : standalone # {standalone, draft}
+lib_cdn     : "https://github.com/ramnathv/slidifyLibraries/tree/master/inst/libraries"
 --- 
 
 ## Fuel Consumption
@@ -54,7 +53,7 @@ Also:
  * the 95% confidence interval (light blue box)
  * data points (black)
 
-![plot of chunk unnamed-chunk-2](figure/unnamed-chunk-2-1.png)
+![plot of chunk unnamed-chunk-2](assets/fig/unnamed-chunk-2-1.png)
 
 ---
 

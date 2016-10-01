@@ -6,7 +6,8 @@ framework   : io2012        # {io2012, html5slides, shower, dzslides, ...}
 highlighter : highlight.js  # {highlight.js, prettify, highlight}
 hitheme     : tomorrow      # 
 widgets     : []            # {mathjax, quiz, bootstrap}
-mode        : standalone # {standalone, draft}
+mode        : selfcontained # {standalone, draft}
+knit        : slidify::knit2slides
 lib_cdn     : "https://github.com/ramnathv/slidifyLibraries/tree/master/inst/libraries"
 --- 
 

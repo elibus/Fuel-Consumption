@@ -8,11 +8,13 @@ runtime: shiny
 This application uses the R `mtcars` dataset to predict mileage per gallon (`mpg`).
 
 # Application usage
-User input can be adjusted using the following three widgets: 
+Three predictors are used:
 
   1. Horse Power (`hp`)
   1. Weigth (`wt`)
   1. Transmission Type (`am`)
+
+Those predictors can be adjusted using the following three input widgets: 
 
 ```{r, echo = FALSE}
 library(shiny)
@@ -47,7 +49,7 @@ shinyUI(fluidPage(
       radioButtons(
         "am",
         "Transmission type:",
-        choices = c("Auto" = 0 , "Manual" = 1)
+        choices = c("Auto", "Manual")
       )
     ),
     
@@ -58,12 +60,14 @@ shinyUI(fluidPage(
 ```
 
 
-The following plot gets updated whenever the input changes. It shows the prediction and the 95% confidence interval.
+Whenever one of the widget changes the following plot gets updates. It shows the prediction and the 95% confidence interval.
 
 ```{r , echo = FALSE}
+fit <- lm(mpg ~ am + wt + hp, data = mtcars)
+
 renderPlot({
     # New data frame for prediction
-    new <- data.frame(am = as.numeric(input$am),
+    new <- data.frame(am = input$am,
                       wt = input$wt,
                       hp = input$hp)
 

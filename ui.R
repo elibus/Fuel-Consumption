@@ -39,7 +39,7 @@ shinyUI(fluidPage(
       radioButtons(
         "am",
         "Transmission type:",
-        choices = c("Auto" = 0 , "Manual" = 1)
+        choices = c("Auto", "Manual")
       )
     ),
     

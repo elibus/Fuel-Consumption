@@ -4,7 +4,7 @@ library(shiny)
 shinyServer(function(input, output) {
   output$plot <- renderPlot({
     # New data frame for prediction
-    new <- data.frame(am = as.numeric(input$am),
+    new <- data.frame(am = input$am,
                       wt = input$wt,
                       hp = input$hp)
 

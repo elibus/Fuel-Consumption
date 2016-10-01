@@ -5,14 +5,21 @@ runtime: shiny
 ---
 
 # Overview
-This application uses the R `mtcars` dataset to predict mileage per gallon (`mpg`).
+This application uses the R `mtcars` dataset to predict mileage per gallon (`mpg`) of cars.
 
+## Requirements
+The application uses the following R packages:
+
+ * shiny
+ * ggplot2
+ 
+ 
 # Application usage
 Three predictors are used:
 
-  1. Horse Power (`hp`)
-  1. Weigth (`wt`)
-  1. Transmission Type (`am`)
+ 1. Horse Power (`hp`)
+ 1. Weigth (`wt`)
+ 1. Transmission Type (`am`)
 
 Those predictors can be adjusted using the following three input widgets: 
 
@@ -60,7 +67,13 @@ shinyUI(fluidPage(
 ```
 
 
-Whenever one of the widget changes the following plot gets updates. It shows the prediction and the 95% confidence interval.
+Whenever one of the widget changes the following plot gets updates. 
+
+It shows:
+
+ * the prediction (blue line) 
+ * the 95% confidence interval (light blue box)
+ * data points (black)
 
 ```{r , echo = FALSE}
 fit <- lm(mpg ~ am + wt + hp, data = mtcars)
@@ -89,3 +102,5 @@ renderPlot({
   
 ```
 
+# Source code
+Source code can be found here: https://github.com/elibus/FuelConsumption

@@ -1,9 +1,0 @@
-{
-    "path" : "~/dev/FuelConsumption",
-    "sortOrder" : [
-        {
-            "ascending" : true,
-            "columnIndex" : 2
-        }
-    ]
-}

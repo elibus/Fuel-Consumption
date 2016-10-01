@@ -1,6 +1,14 @@
+# Fuel Consumption Estimation application
+# 
+# This application uses the mtcars data set to predict mileage per gallon
+# based on user 3 input: Horse Power (hp), Transmission Type (am) and Weigth (wt)
+# 
+# source: https://github.com/elibus/FuelConsumption
+
 library(shiny)
 library(ggplot2)
 
+# Load mtcars data set
 data(mtcars)
 mtcars$am <- as.factor(mtcars$am)
 levels(mtcars$am) <- c("Auto", "Manual")

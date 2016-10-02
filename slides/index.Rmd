@@ -6,8 +6,8 @@ framework   : io2012        # {io2012, html5slides, shower, dzslides, ...}
 highlighter : highlight.js  # {highlight.js, prettify, highlight}
 hitheme     : tomorrow      # 
 widgets     : []            # {mathjax, quiz, bootstrap}
-mode        : standalone # {standalone, draft}
-lib_cdn     : "https://github.com/ramnathv/slidifyLibraries/tree/master/inst/libraries"
+mode        : selfcontained # {standalone, draft}
+#lib_cdn     : "https://github.com/ramnathv/slidifyLibraries/tree/master/inst/libraries"
 --- 
 
 ## Fuel Consumption
@@ -37,7 +37,7 @@ Three predictors are used:
 
 Also:
  * Predictors can be adjusted using three input widgets.
- * Whenever one of the widget changes the following plot gets updates. 
+ * Whenever one of the widget changes the plor gets updated. 
 
 ---
 
@@ -52,7 +52,7 @@ library(ggplot2)
 fit <- lm(mpg ~ am + wt + hp, data = mtcars)
 
 # New data frame for prediction
-    new <- data.frame(am = as.factor(mean(mtcars$am)),
+    new <- data.frame(am = "Auto",
                       wt = mean(mtcars$wt),
                       hp = mean(mtcars$hp))
 

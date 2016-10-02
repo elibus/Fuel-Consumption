@@ -67,7 +67,7 @@ shinyUI(fluidPage(
 ```
 
 
-Whenever one of the widget changes the following plot gets updates. 
+Whenever one of the widget changes the following plot gets updated. 
 
 It shows:
 

@@ -6,8 +6,8 @@ framework   : io2012        # {io2012, html5slides, shower, dzslides, ...}
 highlighter : highlight.js  # {highlight.js, prettify, highlight}
 hitheme     : tomorrow      # 
 widgets     : []            # {mathjax, quiz, bootstrap}
-mode        : standalone # {standalone, draft}
-lib_cdn     : "https://github.com/ramnathv/slidifyLibraries/tree/master/inst/libraries"
+mode        : selfcontained # {standalone, draft}
+#lib_cdn     : "https://github.com/ramnathv/slidifyLibraries/tree/master/inst/libraries"
 --- 
 
 ## Fuel Consumption
@@ -44,7 +44,7 @@ Three predictors are used:
 
 Also:
  * Predictors can be adjusted using three input widgets.
- * Whenever one of the widget changes the following plot gets updates. 
+ * Whenever one of the widget changes the plor gets updated. 
 
 ---
 
@@ -53,7 +53,7 @@ Also:
  * the 95% confidence interval (light blue box)
  * data points (black)
 
-![plot of chunk unnamed-chunk-2](assets/fig/unnamed-chunk-2-1.png)
+![plot of chunk unnamed-chunk-2](figure/unnamed-chunk-2-1.png)
 
 ---
 

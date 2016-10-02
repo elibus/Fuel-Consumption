@@ -46,7 +46,7 @@ Also:
  * the 95% confidence interval (light blue box)
  * data points (black)
 
-```{r, echo=FALSE, warning=FALSE}
+```{r, echo=FALSE, warning=FALSE, fig.width=9, fig.height=5, fig.align='center'}
 library(ggplot2)
 
 fit <- lm(mpg ~ am + wt + hp, data = mtcars)

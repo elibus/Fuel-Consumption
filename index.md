@@ -53,7 +53,7 @@ Also:
  * the 95% confidence interval (light blue box)
  * data points (black)
 
-![plot of chunk unnamed-chunk-2](figure/unnamed-chunk-2-1.png)
+<img src="figure/unnamed-chunk-2-1.png" title="plot of chunk unnamed-chunk-2" alt="plot of chunk unnamed-chunk-2" style="display: block; margin: auto;" />
 
 ---
 

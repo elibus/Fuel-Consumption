@@ -16,6 +16,9 @@ Fuel Consumption:
 
 - uses the R `mtcars` dataset
 - predicts mileage per gallon (`mpg`) of cars
+- uses a simple linear model
+
+This is what the `mtcars` dataset looks like.
 
 ```{r echo=FALSE}
 # Load mtcars data set
